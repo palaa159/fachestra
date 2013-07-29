@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/recorder.js"></script>
+		<script src="js/connect.js"></script>
+	</head>
+	<body>
+		<h1>Hello take a pic</h1>
+		<section id="takeVid">
+			<div id="videoWrapper">
+			<div id="video">
+				<div id="headSilhouette"></div>
+				<video id="videoOut" class="videoStream" autoplay></video>
+				<canvas width="240" height="240" id="imgCanvas"></canvas>
+			</div>
+			<div id="result">
+				<img src="" width="240" height="240">
+			</div>
+			</div>
+			<p class="info">Hit a spacebar to shoot</p>
+			<button id="retake">re-take</button>
+			<button id="satisfied" style="display:none">Next</button>
+		</section>
+		<section id="recAudio">
+			<p class="info"></p>
+			<audio autoplay control></audio>
+			<h3 class="sayAhh">Say Ahhhhh...</h3>
+		</section>
+		<section id="finalize">
+			<button id="publicPic">You want to show your face</button>
+			<button id="privatePic">Make your picture private (pixelated)</button>
+			<button id="upload">Upload</button>
+		</section>
+		<script src="js/io.js"></script>
+	</body>
+</html>
